@@ -3,8 +3,7 @@
 }
 
 .sidenav {
-  width: 200px;
-  background-color: dimgrey !important;
+  width: 200px; 
 }
 
 .mat-toolbar.mat-primary {

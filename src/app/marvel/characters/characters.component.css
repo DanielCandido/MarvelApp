@@ -3,27 +3,55 @@ img{
     width: 80px;
 }
 
-table {
+/* table {
     border-collapse: collapse;
     width: 100%;
 }
 
 table, th, td {
-    border: 1px solid black;
+    border: 0.5px solid dimgrey;
   }
 
 th{
-    text-align: left;
+    text-align: center;
 }
 
 td {
     height: 50px;
-    vertical-align: bottom;
+    vertical-align: center;
   }
+
+  background-image: url(https://wallpapercave.com/wp/wp2700193.png);
+    background-position: 50%;
+    position:absolute;
+    left:0px;
+    top:0;
+    margin-top:-50%;
+    height: 100%;
+    width:100%;
+    margin:0;
+
+  tr:hover {background-color: #f5f5f5;} */
+table{
+  width: 100%;
+}
 
   th, td {
     padding: 15px;
-    text-align: left;
+    text-align: center !important;
   }  
 
-  tr:hover {background-color: #f5f5f5;}
+  .background{
+      padding: 55px;
+  }
+
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+
+  .description{
+    max-width: 190px; /* Tamanho */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+  }

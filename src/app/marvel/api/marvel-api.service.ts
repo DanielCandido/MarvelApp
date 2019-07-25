@@ -12,7 +12,9 @@ export class MarvelApiService {
   API_URL = `https://gateway.marvel.com/v1/public/${this.ENDPOINT}`;
   HEROES: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    console.log("ApiMarvel");
+   }
 
 
   getHeroes(){
