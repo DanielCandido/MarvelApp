@@ -1,0 +1,18 @@
+<div class="background">
+    <table >
+        <thead>
+            <th>Imagem</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Quandrinhos Citados</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let hero of heroes">
+                <td><img src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}"></td>
+                <td>{{hero.name}}</td>
+                <td>{{hero.description}}</td>
+                <td>{{hero.stories.returned}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
