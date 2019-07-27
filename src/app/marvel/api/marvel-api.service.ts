@@ -11,6 +11,8 @@ export class MarvelApiService {
   ENDPOINT = `characters?apikey=${this.API_KEY}&limit=100`;
   API_URL = `https://gateway.marvel.com/v1/public/${this.ENDPOINT}`;
   HEROES: any;
+  OFFSET = 0;
+  DATA: any;
 
   constructor(private http: HttpClient) {
     console.log("ApiMarvel");
@@ -23,12 +25,21 @@ export class MarvelApiService {
     }
 
     return new Promise(resolve => {
-      
-      this.http.get(this.API_URL)
+      this.http.get(this.API_URL+`&offset=${this.OFFSET}`)
         .subscribe(data => {
-          this.HEROES = data;
-          console.log(this.HEROES);
-          resolve(this.HEROES);
+          this.DATA = data;
+          console.log(this.DATA);
+          let total = this.DATA.data.total;
+          // while(total < total){
+          //   total = -100;
+          //   this.OFFSET = +100;
+          //   console.log(total);
+          //   this.http.get(this.API_URL+`&offset=${this.OFFSET}`).subscribe(data => {
+          //     this.HEROES = data;
+          //     console.log(this.HEROES);
+          //   })
+          // }
+          resolve(this.DATA);
         })
     })        
   }

@@ -1,12 +1,21 @@
 img{
     height: 80px;
     width: 80px;
+    padding: 24px 24px 20px 24px;
 }
+
+th.mat-header-cell {padding: 24px;}
+/* td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type, th.mat-header-cell:first-of-type {
+  padding-left: 0px;
+} */
 
 /* table {
     border-collapse: collapse;
     width: 100%;
 }
+
+https://stackblitz.com/edit/mat-sidenav-responsive?file=app%2Fsidenav-responsive-example.html
+
 
 table, th, td {
     border: 0.5px solid dimgrey;
@@ -36,9 +45,9 @@ table{
   width: 100%;
 }
 
-  th, td {
-    padding: 15px;
-    text-align: center !important;
+  td {
+    padding: 15px !important;
+    border: 0.5px solid rgba(0,0,0,.12);
   }  
 
   .background{
@@ -49,9 +58,30 @@ table{
     color: black;
   }
 
-  .description{
-    max-width: 190px; /* Tamanho */
+  /* .description{
+  max-width: 190px;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: '... (continuar lendo)';
   white-space: nowrap
+  }
+
+  .description:hover{
+    text-overflow: clip;
+    width: 100%;
+  } */
+
+  .name{
+    width: 15% !important;
+  }
+
+  .description{
+    width: 35% !important;
+  }
+
+  .comics{
+    width: 35% !important;
+  }
+
+  .img{
+    width: 15% !important;
   }
