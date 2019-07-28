@@ -1,46 +1,15 @@
 img{
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
     padding: 24px 24px 20px 24px;
 }
 
 th.mat-header-cell {padding: 24px;}
-/* td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type, th.mat-header-cell:first-of-type {
-  padding-left: 0px;
-} */
-
-/* table {
-    border-collapse: collapse;
-    width: 100%;
-}
+/* 
 
 https://stackblitz.com/edit/mat-sidenav-responsive?file=app%2Fsidenav-responsive-example.html
 
-
-table, th, td {
-    border: 0.5px solid dimgrey;
-  }
-
-th{
-    text-align: center;
-}
-
-td {
-    height: 50px;
-    vertical-align: center;
-  }
-
-  background-image: url(https://wallpapercave.com/wp/wp2700193.png);
-    background-position: 50%;
-    position:absolute;
-    left:0px;
-    top:0;
-    margin-top:-50%;
-    height: 100%;
-    width:100%;
-    margin:0;
-
-  tr:hover {background-color: #f5f5f5;} */
+ */
 table{
   width: 100%;
 }
@@ -59,7 +28,7 @@ table{
   }
 
   /* .description{
-  max-width: 190px;
+  max-width: 100px;
   overflow: hidden;
   text-overflow: '... (continuar lendo)';
   white-space: nowrap
@@ -85,3 +54,16 @@ table{
   .img{
     width: 15% !important;
   }
+  
+  .tr-min {
+    display:none;
+  } 
+
+  @media screen and (max-width: 768px) {
+    .tr-max {
+        display:none;
+    }
+    .tr-min {
+        display:table;
+    }
+}
