@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MarvelApiService } from '../api/marvel-api.service';
 import {MatPaginator } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material';
+import { MatTableDataSource, MatTable } from '@angular/material';
 import {MatSort} from '@angular/material/sort';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 
@@ -23,14 +23,16 @@ export class CharactersComponent implements OnInit {
   public obj: any;
   public heroes: any;
   displayedColumns: string[] = ['image','name','description','stories'];
-  dataSource = new MatTableDataSource(this.heroes);
+  dataSource = new MatTableDataSource<any>();
   expandedElement = this.heroes;
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
+  @ViewChild('table', {static: true}) myTable: MatTable<Component>;
 
   constructor(private apiMarvel : MarvelApiService) { 
     this.getAllCharacters();
+    // this.getData();
   }
 
   ngOnInit() {
@@ -38,14 +40,20 @@ export class CharactersComponent implements OnInit {
   }
 
   getAllCharacters(){
-    this.apiMarvel.getHeroes()
+    this.apiMarvel.getAllHeroes()
       .then(success => {
         this.heroes = success;
         console.log(this.heroes);
-        this.dataSource = new MatTableDataSource(this.heroes);
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
+        if(this.heroes){
+          setTimeout(() => {this.getData(this.heroes)},5000);
+        }
       })
+  }
+
+  getData(allHeroes: any){
+    this.dataSource = new MatTableDataSource<any>(allHeroes);
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
   applyFilter(name: string) {

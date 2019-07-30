@@ -18,9 +18,9 @@
         </tbody>
     </table> -->
     <mat-form-field>
-        <input matInput (keyup)="applyFilter($event.target.value)" value="a" placeholder="Pesquisar por nome">
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Pesquisar por nome">
     </mat-form-field>
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort> 
+    <table mat-table *ngIf="heroes" [dataSource]="dataSource" class="mat-elevation-z8" matSort> 
         <ng-container matColumnDef="image">
             <th mat-header-cell *matHeaderCellDef> Foto </th>
             <td mat-cell *matCellDef="let heroes" class="img"> <img src="{{heroes.thumbnail.path}}.{{heroes.thumbnail.extension}}"></td>
@@ -41,5 +41,5 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    <mat-paginator [pageSizeOptions]="[20, 50, 100]" showFirstLastButtons></mat-paginator>
 </div>
