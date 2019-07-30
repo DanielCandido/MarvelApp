@@ -43,14 +43,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CharactersComponent } from './marvel/characters/characters.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { TestComponent } from './test/test.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharactersComponent,
     SidebarComponent,
-    TestComponent
+    HomePageComponent
   ],
   imports: [
     BrowserModule,

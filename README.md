@@ -1,27 +1,20 @@
 # MarvelApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
+Este projeto foi gerado com Angular [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
 
-## Development server
+# Download
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`https://github.com/DanielCandido/MarvelApp`
 
-## Code scaffolding
+# Instalação
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Após efetuar o download do projeto, abra o cmd e navegue até a pasta onde efetuou o download
+e execute o seguinte comando:
 
-## Build
+`npm install`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+após o termino execute outro comando:
 
-## Running unit tests
+`ng serve`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Abra o navegador em `https://localhost:4200/"`

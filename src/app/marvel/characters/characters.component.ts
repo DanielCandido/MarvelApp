@@ -22,8 +22,6 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 export class CharactersComponent implements OnInit {
   public obj: any;
   public heroes: any;
-  public obj1: any;
-  public heroes1 = [];
   displayedColumns: string[] = ['image','name','description','stories'];
   dataSource = new MatTableDataSource(this.heroes);
   expandedElement = this.heroes;
@@ -33,7 +31,6 @@ export class CharactersComponent implements OnInit {
 
   constructor(private apiMarvel : MarvelApiService) { 
     this.getAllCharacters();
-    // this.getAllHeroes();
   }
 
   ngOnInit() {
@@ -42,24 +39,12 @@ export class CharactersComponent implements OnInit {
 
   getAllCharacters(){
     this.apiMarvel.getHeroes()
-      .then(data => {
-        this.obj = data;
-        this.heroes = this.obj.data.results;
+      .then(success => {
+        this.heroes = success;
+        console.log(this.heroes);
         this.dataSource = new MatTableDataSource(this.heroes);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
-        // console.log(this.heroes);
-      })
-  }
-
-  getAllHeroes(){
-    this.apiMarvel.getData()
-      .then(data => {
-        this.obj1 = data;
-        // for(let i =0; i < 15; i++){
-        //   this.heroes1.push(this.obj.data.results)
-        // }
-        console.log(this.obj1);
       })
   }
 

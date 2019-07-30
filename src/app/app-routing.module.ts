@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CharactersComponent } from './marvel/characters/characters.component';
-import { TestComponent } from './test/test.component';
+import { HomePageComponent } from './home-page/home-page.component';
+
 
 
 const routes: Routes = [
   {
     path: '',
-    component: CharactersComponent
+    component: HomePageComponent
   },
   {
-    path: 'teste',
-    component: TestComponent
+    path: 'Heroes',
+    component: CharactersComponent
   }
 ];
 

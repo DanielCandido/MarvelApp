@@ -18,7 +18,7 @@
         </tbody>
     </table> -->
     <mat-form-field>
-        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Pesquisar por nome">
+        <input matInput (keyup)="applyFilter($event.target.value)" value="a" placeholder="Pesquisar por nome">
     </mat-form-field>
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort> 
         <ng-container matColumnDef="image">
@@ -35,7 +35,7 @@
         </ng-container>
         <ng-container matColumnDef="stories">
             <th mat-header-cell *matHeaderCellDef> Quandrinhos Citados </th>
-            <td mat-cell *matCellDef="let heroes"  class="comics"><p *ngFor="let comics of heroes.comics.items">{{comics.name}}{{comics == 0 ? 'Sem citações' : ''}}</p></td>
+            <td mat-cell *matCellDef="let heroes"  class="comics"><p *ngFor="let comics of heroes.comics.items">{{comics.name}}{{comics.name == '' ? 'Sem citações' : ''}}</p></td>
         </ng-container>
         
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
