@@ -1,29 +1,12 @@
+<img src="../../assets/marvel.png" class="imgMarvel">
 <div class="background">
-    <!-- <table >
-        <thead>
-            <tr>
-                <th>Imagem</th>
-                <th>Nome</th>
-                <th>Descrição</th>
-                <th>Quandrinhos Citados</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let hero of heroes">
-                <td><img src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}"></td>
-                <td>{{hero.name}}</td>
-                <td>{{hero.description}}</td>
-                <td>{{hero.stories.returned}}</td>
-            </tr>
-        </tbody>
-    </table> -->
     <mat-form-field>
         <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Pesquisar por nome">
     </mat-form-field>
     <table mat-table *ngIf="heroes" [dataSource]="dataSource" class="mat-elevation-z8" matSort> 
         <ng-container matColumnDef="image">
             <th mat-header-cell *matHeaderCellDef> Foto </th>
-            <td mat-cell *matCellDef="let heroes" class="img"> <img src="{{heroes.thumbnail.path}}.{{heroes.thumbnail.extension}}"></td>
+            <td mat-cell *matCellDef="let heroes" class="img"> <img id="imgHeroes" src="{{heroes.thumbnail.path}}.{{heroes.thumbnail.extension}}"></td>
         </ng-container>
         <ng-container matColumnDef="name">
             <th mat-header-cell *matHeaderCellDef mat-sort-header class="nomeTabela"> Nome </th>

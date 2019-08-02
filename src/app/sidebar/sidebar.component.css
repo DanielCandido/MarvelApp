@@ -54,12 +54,12 @@ mat-sidenav {
   background-color: black;
 }
 
-.imgMarvel{
+.imgLogo{
   display: block;
   margin: 5px auto;
   max-width: 100%;
   width: 180px;
-  height: 100px;
+  height: 60px;
 }
 
 /* #content {

@@ -5,3 +5,10 @@ html, body {
     margin: 0px;
     border: none;
 }
+.imgMarvel{
+    display: block;
+    margin: 5px auto;
+    max-width: 100%;
+    width: 780px;
+    height: 350px;
+  }
